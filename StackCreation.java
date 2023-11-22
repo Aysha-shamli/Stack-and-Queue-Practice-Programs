@@ -8,6 +8,24 @@ public class StackCreation {
         newNode.next = head;
         head = newNode;
     }
+    public int pop() {
+        if (head == null) {
+            System.out.println("Stack is empty. Cannot pop.");
+            return -1;
+        }
+
+        int poppedData = head.data;
+        head = head.next;
+        return poppedData;
+    }
+    public int peek() {
+        if (head == null) {
+            System.out.println("Stack is empty. Cannot peek.");
+            return -1;
+        }
+
+        return head.data;
+    }
     public void printData() {
         Node current = head;
         while (current != null) {
@@ -24,6 +42,10 @@ public class StackCreation {
         stack.push(56);
 
         stack.printData();
-
+        
+        while (!(stack.head == null)) {
+            System.out.println("Peek: " + stack.peek());
+            System.out.println("Pop: " + stack.pop());
+        }
     }
 }
