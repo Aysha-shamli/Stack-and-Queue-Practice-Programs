@@ -11,5 +11,6 @@ public class QueueCreation {
         num.add(30);
         num.add(70);
         System.out.println(num);
+        System.out.println("remove number :"+num.remove());
     }
 }
